@@ -1,0 +1,141 @@
+/* Center the container both vertically and horizontally */
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style the heading */
+.upload-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Style the file info */
+.file-info {
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Style the file input label */
+.file-input-label {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 150px;
+}
+
+/* Style the file input */
+.file-input {
+    display: none;
+}
+
+/* Style the upload button */
+.upload-button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #ff7043;
+}
+
+.upload-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Style the link info */
+.link-info {
+    margin-top: 20px;
+    background-color: #4caf50;
+    padding: 10px;
+    border-radius: 4px;
+    transform: translateY(20px);
+    animation: slide-in 0.5s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Slide-in animation */
+@keyframes slide-in {
+    0% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.link-info p {
+    margin: 0;
+    color: #fff;
+}
+
+.copy-button {
+
+    /* Blue color */
+    background-color: #0056b3;
+    color: #fff;
+    /* White color for text */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    /* Allow icon and text to be aligned horizontally */
+    align-items: center;
+    /* Center icon and text vertically */
+}
+
+
+.copy-button:hover {
+    background-color: #073a70;
+    /* Darker blue color on hover */
+}
+
+.copy-confirmation {
+    color: white;
+}
+
+/* Style the image preview */
+.image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    /* Set the maximum height to control the image size */
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
