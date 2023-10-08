@@ -33,7 +33,7 @@ const FileUploadPage = () => {
         formData.append("file", file);
 
         const response = await axios.post(
-          "http://localhost:5000/upload",
+          "https://fileuploadand.onrender.com/upload",
           formData,
           {
             headers: {
