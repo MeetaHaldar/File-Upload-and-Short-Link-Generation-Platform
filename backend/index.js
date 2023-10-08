@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const multer = require("multer");
 const cors = require("cors");
-const shortid = require("shortid");
+const uuid = require("uuid");
 const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
@@ -39,7 +39,7 @@ app.use(express.static("uploads"));
 app.post("/upload", upload.single("file"), async (req, res) => {
   try {
     const { originalname, filename } = req.file;
-    const shortLink = shortid.generate();
+    const shortLink = uuid.v4(); // Use uuid.v4() to generate a UUID
 
     const file = new File({ originalName: originalname, shortLink: shortLink });
     await file.save();
