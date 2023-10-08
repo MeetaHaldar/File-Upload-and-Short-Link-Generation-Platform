@@ -13,7 +13,9 @@ const FilePreviewPage = ({ match }) => {
 
   const fetchFileInfo = async (shortLink) => {
     try {
-      const response = await axios.get(`http://localhost:5000/${shortLink}`);
+      const response = await axios.get(
+        `https://fileuploadand.onrender.com/${shortLink}`
+      );
       const data = response.data;
       setFileUrl(data.fileUrl);
       setFileName(data.fileName);

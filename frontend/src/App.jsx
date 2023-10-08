@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<FileUploadPage />} />
-        {/* <Route path="/preview/:fileUrl" element={<FilePreviewPage />} /> */}
+        <Route path="/preview/:fileUrl" element={<FilePreviewPage />} />
       </Routes>
     </Router>
   );
