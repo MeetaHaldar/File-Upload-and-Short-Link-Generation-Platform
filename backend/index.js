@@ -8,7 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const File = require("./model/fileSchema");
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.use(cors());
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_STRING, {
