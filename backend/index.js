@@ -43,7 +43,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 
     const file = new File({ originalName: originalname, shortLink: shortLink });
     await file.save();
-    const yourLink = `http://localhost:5000/${shortLink}`;
+    const yourLink = `https://fileuploadand.onrender.com/${shortLink}`;
     res.json({ yourLink });
   } catch (error) {
     console.error(error);
