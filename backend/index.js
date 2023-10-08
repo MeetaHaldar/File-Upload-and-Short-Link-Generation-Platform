@@ -83,6 +83,9 @@ app.get("/download/:shortLink", async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
+app.get("/", (req, res) => {
+  res.send("File-Upload-and-Short-Link-Generation-Platform");
+});
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
